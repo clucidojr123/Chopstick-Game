@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(228, 228, 228);
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    height: 750px;
+    border: solid black 2px;
+    text-align: center;
+}
+.header{
+    margin: 50px auto 40px auto;
+}
+.name{
+    padding: 0;
+    margin: 0 auto;
+    font-size: 1.25em;
+}
+
+#board{
+    padding: 0;
+    margin: auto;
+    border-spacing: 50px 50px;
+    font-size: 2em;
+}
+
+.hand{
+    padding: 30px;
+    border: solid black 2px;
+}
+.hand:hover{
+    color: white;
+    background-color: black;
+}
+
+.hand:active{
+    color: black;
+    background-color: rgb(228, 228, 228);
+}
+
+.turn {
+    margin: auto;
+    margin-top: 30px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+.reset{
+    margin: auto;
+    margin-top: 30px;
+}
+#rebutton{
+    font-size: 1.5em;
+    width: 200px;
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link type="text/css" rel="stylesheet" href="styles.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chopsticks Game</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Chopsticks Game</h1>
+        </div>
+        <div class="name">
+                <h3>Top</h3>
+            </div>
+        <table id="board">
+            <tr class="player" id="top">
+                <td class="hand left" id="TOP_LEFT">1</td>
+                <td class="hand right" id="TOP_RIGHT">1</td>
+            </tr>
+            <tr class="player" id="bot">
+                <td class="hand left" id="BOT_LEFT">1</td>
+                <td class="hand right" id="BOT_RIGHT">1</td>
+            </tr>
+        </table>
+        <div class="name" id="bot_name">
+                <h3>Bottom</h3>
+        </div>
+        <div class="turn">
+            <p id="turn">It is the bottom player's turn.</p>
+            <p id="action">Choose the hand to attack/swap from.</p>
+        </div>
+        <div class="reset">
+            <button id="rebutton">Reset Game</button>
+        </div>
+        <script type="text/javascript" src="script.js">
+        </script>
+    </body>
+</html>
