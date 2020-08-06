@@ -58,3 +58,15 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 800px){
+    body {
+        width: 95%;
+        margin-top: 5px;
+        padding-top: 20px;
+    }
+
+    .turn {
+        font-size: 1.25em;
+    }
+}
