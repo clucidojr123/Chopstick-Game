@@ -36,10 +36,6 @@ body{
     background-color: black;
 }
 
-.hand:active{
-    color: black;
-    background-color: rgb(228, 228, 228);
-}
 
 .turn {
     margin: auto;
@@ -68,5 +64,10 @@ body{
 
     .turn {
         font-size: 1.25em;
+    }
+
+    .hand:active{
+        color: black;
+        background-color: rgb(228, 228, 228);
     }
 }
