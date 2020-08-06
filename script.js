@@ -25,18 +25,18 @@ let selected = null;
  * @param {HTMLElement} from - the hand to move from
  */
 function move(to, from) {
-    let amt = +to.innerHTML + +from.innerHTML;
-    to.innerHTML = amt >= MAX ? '0' : amt;
+    let amt = +to.textContent + +from.textContent;
+    to.textContent = amt >= MAX ? '0' : amt;
     if(to.id.substring(0,3) == from.id.substring(0,3))
-        from.innerHTML = '0';
+        from.textContent = '0';
     turn += 1;
-    turnMessage.innerHTML = turn % 2 === 0 ? botMessage : topMessage;
-    chooseMessage.innerHTML = chooseOne;
+    turnMessage.textContent = turn % 2 === 0 ? botMessage : topMessage;
+    chooseMessage.textContent = chooseOne;
     if(empty('TOP') || empty('BOT')) {
         endgame = true;
-        turnMessage.innerHTML = empty('TOP') ? botEnd : topEnd;
+        turnMessage.textContent = empty('TOP') ? botEnd : topEnd;
         turnMessage.style.color = 'green';
-        chooseMessage.innerHTML = chooseEnd;
+        chooseMessage.textContent = chooseEnd;
     }
         
 }
@@ -65,9 +65,9 @@ TOP_RIGHT.onclick = () => {
  */
 function action(hand) {
     if(hand.id.substring(0,3) == 'BOT') {
-        if(turn % 2 === 0 && selected === null && +hand.innerHTML > 0 ) {
+        if(turn % 2 === 0 && selected === null && +hand.textContent > 0 ) {
             selected = hand;
-            chooseMessage.innerHTML = chooseTwo;
+            chooseMessage.textContent = chooseTwo;
             hand.style.border = selectedBorder; 
         } else if(selected != null && hand != selected){
             move(hand, selected);
@@ -75,9 +75,9 @@ function action(hand) {
             selected = null;
         } return;
     } else {
-        if(turn % 2 === 1 && selected === null && +hand.innerHTML > 0 ) {
+        if(turn % 2 === 1 && selected === null && +hand.textContent > 0 ) {
             selected = hand;
-            chooseMessage.innerHTML = chooseTwo;
+            chooseMessage.textContent = chooseTwo;
             hand.style.border = selectedBorder;
         } else if(selected != null && hand != selected){
             move(hand, selected);
@@ -93,9 +93,9 @@ function action(hand) {
  */
 function empty(side){
     if(side === 'TOP')
-        return TOP_LEFT.innerHTML === '0' && TOP_RIGHT.innerHTML === '0' ? 1 : 0;
+        return TOP_LEFT.textContent === '0' && TOP_RIGHT.textContent === '0' ? 1 : 0;
     else 
-        return BOT_LEFT.innerHTML === '0' && BOT_RIGHT.innerHTML === '0' ? 1 : 0;
+        return BOT_LEFT.textContent === '0' && BOT_RIGHT.textContent === '0' ? 1 : 0;
 }
 
 //Reset the game on button click
@@ -113,8 +113,8 @@ function resetGame() {
     resetHelper(TOP_RIGHT);
     turn = 0;
     turnMessage.style.color = 'black';
-    chooseMessage.innerHTML = chooseOne;
-    turnMessage.innerHTML = botMessage;
+    chooseMessage.textContent = chooseOne;
+    turnMessage.textContent = botMessage;
     selected = null;
     endgame = false;
 }
@@ -124,6 +124,6 @@ function resetGame() {
  * @param {HTMLElement} hand - hand to reset 
  */
 function resetHelper(hand) {
-    hand.innerHTML = '1';
+    hand.textContent = '1';
     hand.style.border = ogBorder;
 }
