@@ -31,10 +31,6 @@ body{
     padding: 30px;
     border: solid black 2px;
 }
-.hand:hover{
-    color: white;
-    background-color: black;
-}
 
 .hand:active{
     color: black;
