@@ -42,22 +42,22 @@ function move(to, from) {
 }
 
 //For when a hand is selected
-BOT_LEFT.onclick = () => {
+BOT_LEFT.addEventListener('click', function(){
     if(!endgame)
         action(BOT_LEFT);
-}
-BOT_RIGHT.onclick = () => {
+}) 
+BOT_RIGHT.addEventListener('click', function(){
     if(!endgame)
         action(BOT_RIGHT);
-}
-TOP_LEFT.onclick = () => {
+})
+TOP_LEFT.addEventListener('click', function(){
     if(!endgame)
-        action(TOP_LEFT);
-}
-TOP_RIGHT.onclick = () => {
+    action(TOP_LEFT);
+}) 
+TOP_RIGHT.addEventListener('click', function(){
     if(!endgame)
         action(TOP_RIGHT);
-}
+})
 
 /**
  * Function to handle the text and styling for selecting a hand
@@ -99,9 +99,9 @@ function empty(side){
 }
 
 //Reset the game on button click
-document.getElementById('rebutton').onclick = () => {
-    resetGame();
-}
+document.getElementById('rebutton').addEventListener('click', function() {
+    resetGame(); 
+})
 
 /**
  * Resets the game to the initial state
