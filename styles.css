@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-body{
+body {
     background-color: rgb(228, 228, 228);
     margin: auto;
     margin-top: 20px;
@@ -11,28 +11,28 @@ body{
     border: solid black 2px;
     text-align: center;
 }
-.header{
+.header {
     margin: 50px auto 40px auto;
 }
-.name{
+.name {
     padding: 0;
     margin: 0 auto;
     font-size: 1.25em;
 }
 
-#board{
+#board {
     padding: 0;
     margin: auto;
     border-spacing: 50px 50px;
     font-size: 2em;
 }
 
-.hand{
+.hand {
     padding: 30px;
     border: solid black 2px;
 }
 
-.hand:active{
+.hand:active {
     color: black;
     background-color: rgb(228, 228, 228);
 }
@@ -43,19 +43,19 @@ body{
     font-size: 1.5em;
     line-height: 1.5em;
 }
-.reset{
+.reset {
     margin: auto;
     margin-top: 30px;
 }
-#rebutton{
+#rebutton {
     font-size: 1.5em;
     width: 200px;
     height: 50px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-weight: bold;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
     body {
         width: 95%;
         margin-top: 5px;
@@ -67,8 +67,8 @@ body{
     }
 }
 
-@media only screen and (min-width: 800px){
-    .hand:hover{
+@media only screen and (min-width: 800px) {
+    .hand:hover {
         color: white;
         background-color: black;
     }
